@@ -27,13 +27,13 @@ int main(int argc, char** argv) {
    puntaFile = fopen("elenco.dat","wb");
    if(puntaFile) {
         for(i=0;i<N;i++){
-            printf("Inserisci il nome dell'alunno %d: ",i);
+            printf("Inserisci il nome del %d° alunno: ",i+1);
             scanf("%s", studente.nome);
-            printf("Inserisci il cognome dell'alunno %d: ",i);
+            printf("Inserisci il cognome del %d° alunno: ",i+1);
             scanf("%s", studente.cognome);
-            printf("Inserisci l'eta' dell'alunno %d: ",i);
+            printf("Inserisci l'eta' del %d° alunno: ",i+1);
             scanf("%d", &studente.eta);
-            printf("Inserisci la classe dell'alunno %d: ",i);
+            printf("Inserisci la classe del %d° alunno: ",i+1);
             scanf("%s", studente.classe);
             printf("\n");
             
