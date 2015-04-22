@@ -39,23 +39,10 @@ int main(int argc, char** argv) {
             
             fwrite(&studente,sizeof(studente),1,puntaFile);
         }
+        else
+            printf("Non sono riuscito a scrivere nel file");
        
         fclose(puntaFile);
         
-        puntaFile = fopen("elenco.dat","rb");
-        for(i = 0; i < N; i++) {
-            fread(&studente,sizeof(studente),1,puntaFile);
-            
-            printf("Nome: %s\n", studente.nome);
-            printf("Cognome: %s\n", studente.cognome);
-            printf("Eta': %d\n", studente.eta);
-            printf("Classe: %s\n", studente.classe);
-            printf("\n");
-        }
-        fclose(puntaFile);
-   }
-   else 
-       printf("Il file non e' stato trovato");
-   
     return (EXIT_SUCCESS);
 }
